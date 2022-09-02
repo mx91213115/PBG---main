@@ -1,0 +1,456 @@
+$gray: #808080;
+$white: #fff;
+$brown: #cca66d;
+$pink: #e52081;
+$orange: #ff7700;
+$blue: #00a3e1;
+$yellow: #ffb211;
+
+$background: rgba(13, 13, 13, 0.8);
+
+$big: 1679.98px;
+$xxl: 1399.98px;
+$xl: 1199.98px;
+$lg: 991.98px;
+$md: 767.98px;
+$sm: 575.98px;
+
+$mobile_lg: 425px;
+$mobile_md: 375px;
+$mobile_sm: 320px;
+
+$md_: 768px;
+$sm_: 576px;
+
+$jost: 'Jost';
+$noto: 'Noto Sans TC';
+
+%background_set {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+// -------------index-----------
+%index_title {
+  font-size: 250px;
+  color: $white;
+  font-weight: 600;
+  line-height: 80%;
+  text-transform: uppercase;
+  text-indent: -10px;
+  margin-bottom: 20px;
+
+  @media (max-width: $big) {
+    font-size: 210px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 180px;
+  }
+  @media (max-width: $xl) {
+    font-size: 155px;
+    line-height: 145px;
+  }
+  @media (max-width: $lg) {
+    font-size: 145px;
+    line-height: 80%;
+    margin-bottom: 28px;
+    text-indent: -5px;
+  }
+  @media (max-width: $md) {
+    font-size: 125px;
+  }
+  @media (max-width: $sm) {
+    font-size: 120px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 90px;
+  }
+  @media (max-width: $mobile_md) {
+    margin-bottom: 20px;
+    font-size: 80px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 66px;
+  }
+}
+%index_title_s {
+  font-size: 150px;
+  color: $white;
+  font-weight: 600;
+  line-height: 80%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  @media (max-width: $big) {
+    font-size: 125px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 95px;
+  }
+  @media (max-width: $xl) {
+    letter-spacing: -0.02em;
+    font-size: 80px;
+    line-height: 100%;
+  }
+  @media (max-width: $lg) {
+    line-height: 80%;
+    margin-bottom: 8px;
+    font-size: 105px;
+  }
+  @media (max-width: $md) {
+    line-height: 80%;
+    font-size: 75px;
+  }
+  @media (max-width: $sm) {
+    font-size: 65px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 57px;
+  }
+  @media (max-width: $mobile_md) {
+    font-size: 50px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 48px;
+  }
+}
+%index_title_brown {
+  color: $brown;
+  font-size: 40px;
+  font-family: $jost;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 6px;
+
+  @media (max-width: $big) {
+    font-size: 38px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 32px;
+    line-height: 100%;
+  }
+  @media (max-width: $xl) {
+    font-size: 28px;
+  }
+  @media (max-width: $lg) {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 22px;
+  }
+  @media (max-width: $mobile_md) {
+    font-size: 20px;
+  }
+}
+
+%index_subtitle_l {
+  font-family: $noto;
+  font-size: 40px;
+  font-weight: 700;
+  color: $white;
+  line-height: 46px;
+  margin-bottom: 14px;
+
+  @media (max-width: $big) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  @media (max-width: $xxl) {
+    line-height: 28px;
+    font-size: 26px;
+  }
+  @media (max-width: $xl) {
+    font-size: 25px;
+  }
+  @media (max-width: $lg) {
+    line-height: 100%;
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+  @media (max-width: $md) {
+    font-size: 25px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 24px;
+    line-height: 115%;
+  }
+  @media (max-width: $mobile_md) {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 16px;
+  }
+}
+%index_subtitle_s {
+  font-family: $jost;
+  font-size: 17px;
+  font-weight: 600;
+  color: $brown;
+  line-height: 25px;
+  text-align: justify;
+  @media (max-width: $big) {
+    line-height: 22px;
+    font-size: 15px;
+  }
+  @media (max-width: $xxl) {
+    line-height: 20px;
+    font-size: 13px;
+  }
+  @media (max-width: $lg) {
+    line-height: 27px;
+    font-size: 20px;
+    -moz-text-align-last: center;
+         text-align-last: center;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $md) {
+    line-height: 24px;
+    font-size: 18px;
+  }
+}
+// ----------字型----------------
+// 標題
+%color_title_lg {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 110px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  @media (max-width: $big) {
+    font-size: 95px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 80px;
+  }
+  @media (max-width: $xl) {
+    font-size: 60px;
+  }
+  @media (max-width: $lg) {
+    font-size: 90px;
+  }
+  @media (max-width: $sm) {
+    font-size: 60px;
+  }
+}
+%chinese_white_title {
+  font-family: $noto;
+  color: $white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 115%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  @media (max-width: $big) {
+    font-size: 36px;
+  }
+  @media (max-width: $xl) {
+    font-size: 28px;
+  }
+  @media (max-width: $lg) {
+    font-size: 36px;
+  }
+  @media (max-width: $sm) {
+    font-size: 30px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 20px;
+  }
+}
+%en_white_title {
+  font-family: $jost;
+  color: $white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 80%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  @media (max-width: $big) {
+    font-size: 70px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 60px;
+  }
+  @media (max-width: $xl) {
+    font-size: 50px;
+  }
+  @media (max-width: $lg) {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+  @media (max-width: $sm) {
+    font-size: 44px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 38px;
+  }
+  @media (max-width: $mobile_md) {
+    margin-bottom: 12px;
+    font-size: 32px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 28px;
+  }
+}
+
+// 副標
+%subtitle_color_lg {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
+  @media (max-width: $big) {
+    font-size: 36px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 32px;
+  }
+  @media (max-width: $xl) {
+    font-size: 28px;
+  }
+  @media (max-width: $lg) {
+    font-size: 40px;
+  }
+  @media (max-width: $sm) {
+    font-size: 32px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 28px;
+  }
+}
+%subtitle_color_sm {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 120%;
+  text-transform: uppercase;
+  @media (max-width: $xxl) {
+    font-size: 28px;
+  }
+  @media (max-width: $mobile_md) {
+    font-size: 24px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 20px;
+  }
+}
+//內容
+%content_18 {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: justify;
+  @media (max-width: $xxl) {
+    font-size: 16px;
+  }
+  @media (max-width: $xl) {
+    font-size: 14px;
+  }
+  @media (max-width: $lg) {
+    font-size: 18px;
+    line-height: 150%;
+  }
+  @media (max-width: $mobile_md) {
+    line-height: 130%;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 12px;
+  }
+}
+%content_25 {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+  text-align: justify;
+  letter-spacing: -0.05em;
+  @media (max-width: $big) {
+    font-size: 23px;
+  }
+  @media (max-width: $xxl) {
+    font-size: 18px;
+  }
+  @media (max-width: $xl) {
+    font-size: 16px;
+  }
+  @media (max-width: $mobile_sm) {
+    font-size: 14px;
+  }
+}
+%content_thing {
+  font-family: $jost;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  @media (max-width: $sm) {
+    font-size: 14px;
+  }
+  @media (max-width: $mobile_lg) {
+    font-size: 12px;
+  }
+}
+// ------------base------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: 'Jost', 'Noto Sans TC', Helvetica, Arial, 'Helvetica Neue', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: normal;
+  color: #1a1b1a;
+  background-color: #fff;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* List style */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

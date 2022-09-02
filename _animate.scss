@@ -1,0 +1,300 @@
+// 跑馬燈
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+}
+@-webkit-keyframes scroll2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+// ----------------進度條
+// -------首頁
+.loading-bar {
+  width: 100%;
+  height: 40px;
+  background: #cecece;
+  padding: 2px;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  @media (max-width: $xxl) {
+    height: 36px;
+  }
+  @media (max-width: $lg) {
+    height: 32px;
+  }
+  @media (max-width: $lg) {
+    height: 24px;
+    margin: 12px 0;
+  }
+  @media (max-width: $mobile_md) {
+    height: 20px;
+    margin: 8px 0;
+  }
+  &--progress {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    & span {
+      margin: auto;
+      background: $blue;
+      border-radius: 4px;
+      flex-basis: 11%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      height: 34px;
+      @media (max-width: $xxl) {
+        height: 30px;
+      }
+      @media (max-width: $lg) {
+        height: 26px;
+      }
+      @media (max-width: $lg) {
+        height: 18px;
+      }
+      @media (max-width: $mobile_md) {
+        height: 14px;
+      }
+      transition: all 1s cubic-bezier(0.17, 0.67, 0.88, 0.17);
+      &.animate {
+        -webkit-animation: FadeIn 0.5s ease;
+                animation: FadeIn 0.5s ease;
+      }
+      &:first-of-type {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-of-type {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+    }
+  }
+}
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+    background: $blue;
+    border-radius: 4px;
+  }
+
+  85% {
+    opacity: 1;
+    background: $blue;
+    background: linear-gradient(180deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  100% {
+    transform: scale(1);
+    background: $blue;
+    background: linear-gradient(180deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+    background: $blue;
+    border-radius: 4px;
+  }
+
+  85% {
+    opacity: 1;
+    background: $blue;
+    background: linear-gradient(180deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  100% {
+    transform: scale(1);
+    background: $blue;
+    background: linear-gradient(180deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+  }
+}
+@for $i from 1 through 12 {
+  .loading-bar--progress span:nth-child(#{$i}n) {
+    -webkit-animation-delay: #{$i * 0.15}s;
+            animation-delay: #{$i * 0.15}s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+}
+.loading-bar--progress .first {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+.loading-bar--progress .last {
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+// -------藍圖
+.loading-bar-map {
+  width: auto;
+  height: 100%;
+  background: #cecece;
+  padding: 0 2px;
+  border-right: 1px solid $blue;
+  border-left: 1px solid $blue;
+  &--progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    & span {
+      background: $blue;
+      border-radius: 4px;
+      height: 8.333%;
+      width: 100%;
+      transition: all 1s cubic-bezier(0.17, 0.67, 0.88, 0.17);
+      -webkit-animation: FadeInMap 0.2s ease;
+              animation: FadeInMap 0.2s ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+
+      // &.animate {
+      // }
+    }
+  }
+}
+@for $i from 1 through 12 {
+  .horizontal:nth-child(1) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: $i * 0.15s;
+            animation-delay: $i * 0.15s;
+  }
+  .horizontal:nth-child(3) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(1.8s + ($i * 0.15s));
+            animation-delay: calc(1.8s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(4) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(3.6s + ($i * 0.15s));
+            animation-delay: calc(3.6s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(5) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(5.4s + ($i * 0.15s));
+            animation-delay: calc(5.4s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(6) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(7.2s + ($i * 0.15s));
+            animation-delay: calc(7.2s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(7) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(9s + ($i * 0.15s));
+            animation-delay: calc(9s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(8) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(10.8s + ($i * 0.15s));
+            animation-delay: calc(10.8s + ($i * 0.15s));
+  }
+  .horizontal:nth-child(9) .center .loading-bar-map--progress span:nth-child(#{$i}) {
+    -webkit-animation-delay: calc(12.6s + ($i * 0.15s));
+            animation-delay: calc(12.6s + ($i * 0.15s));
+  }
+}
+@-webkit-keyframes FadeInMap {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+    background: $blue;
+    border-radius: 4px;
+  }
+
+  85% {
+    opacity: 1;
+    background: $blue;
+    background: linear-gradient(90deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  100% {
+    transform: scale(1);
+    background: $blue;
+    background: linear-gradient(90deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+  }
+}
+@keyframes FadeInMap {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+    background: $blue;
+    border-radius: 4px;
+  }
+
+  85% {
+    opacity: 1;
+    background: $blue;
+    background: linear-gradient(90deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  100% {
+    transform: scale(1);
+    background: $blue;
+    background: linear-gradient(90deg, $blue 0%, #037aa9 56%, #013b52 100%);
+    border-radius: 0;
+  }
+}
+// 第一個
+.horizontal:nth-child(1) .center .loading-bar-map {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  padding-top: 2px;
+  border-top: 1px solid $blue;
+  .first {
+    border-top-right-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+  }
+}
+// 最後一個
+.horizontal:nth-child(9) .center .loading-bar-map {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $blue;
+  .last {
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "window.zoomLevel": 2,
+  "search.followSymlinks": false,
+  "files.autoSave": "onWindowChange",
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  // #每次保存的时候自动格式化
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  // #每次保存的时候将代码按eslint格式进行修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // 强制单引号
+  "prettier.singleQuote": true,
+  // 强制末尾分号
+  "prettier.semi": true,
+  // 尽可能控制尾随逗号的打印
+  "prettier.trailingComma": "all",
+
+  "vetur.validation.template": false, // 使用eslint插件时需要把此项设置为false
+  "vetur.validation.script": true, //检查js代码
+  "vetur.validation.style": true, //能检查css的属性是否存在,分隔符是否正确，
+  "vetur.format.defaultFormatter.html": "js-beautify-html", //默认采用js-beautify-html格式化
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto",
+      "indent_size": 2, //缩进大小
+      "indent_char": " ", //缩进字符
+      "indent_with_tabs": false,
+      "eol": "\n", // 用作行终止的字符，默认为\n
+      "end_with_newline": true, //是否用换行符结束
+      "preserve_newlines": true, // 是否保留现有的换行符
+      "max-preserve-newlines": 40, // 一次可保留的最大换行数
+      "indent-inner-html": true, //缩进 head body代码片段
+      "wrap_line_length": 1200, //超过多少字符换行
+      "editorconfig": false //使用editorconfig设置选项
+    }
+  },
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+
+  "html.format.indentHandlebars": true,
+  "html.format.enable": false,
+  "html.format.preserveNewLines": false,
+  "html.format.maxPreserveNewLines": 40,
+
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
